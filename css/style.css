@@ -1,0 +1,122 @@
+html,body,.container{
+    width:100%;
+    height:100%;
+    font-family: 'Montserrat', sans-serif;
+}
+.container{
+    display:block;
+    background-color: #2a2b38;
+    background-image: linear-gradient(#30313e .1em, transparent .1em);
+    background-size: 100% 1.2em;
+}
+.section{
+    width:100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.presentation{ 
+    width:100%;
+    text-align: center;
+}
+.presentation .content-all{
+    height:240px;
+} 
+.presentation .content{ 
+    width: 375px;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+    height:0;
+}
+.navigation{
+    list-style: none;
+    margin:0;
+    padding: 0;
+}
+.navigation-li{
+    display:inline-block;
+    font-family: 'Boogaloo', cursive;
+    margin: 0 8px;
+}
+.navigation-li a{
+    text-decoration:none;
+    color:#dcdcdc;
+    font-size: 32px;
+    transition:.4s;
+    position:relative;
+}
+.navigation-li a:before{
+    content:'';
+    position:absolute;
+    width:0;
+    height:3px;
+    bottom:0;
+    left:50%;
+    background:#fff;
+    transition:.3s;
+}
+.navigation-li.active a:before{
+    color:#fff;
+    width:100%; 
+    left:0;
+}
+.navigation-li a:hover{
+    color:#fff;
+}
+.navigation-li a:hover:before{ 
+    width:100%; 
+    left:0; 
+}
+.profile{
+    width:100px;
+    height:100px;
+    padding:8px;
+    margin:50px auto;
+    cursor:pointer;
+    background:#f5eb5c;
+    border-radius:50%;
+    overflow:hidden;
+    position:relative;
+    z-index:1;
+}
+.picture{
+    background-image: url(./../img/cat.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    border-radius:50%;
+    position:relative;
+    z-index:3;
+}
+.profile:before{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:200%;
+    position:absolute;
+    transform-origin: 50% 50%;
+    transition:0.5s;
+    z-index:2;
+}
+.profile:before{
+    background: #555555;
+    left: 55px;
+    top: -50%;
+}
+.profile:hover:before{
+    /* transform: rotate(27deg); */
+    transform: rotate(90deg);
+}
+.show{
+    visibility: visible !important;
+    opacity: 1 !important;
+    height:auto !important;
+}
