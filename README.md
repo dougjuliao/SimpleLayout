@@ -1,2 +1,2 @@
 # SimpleLayout
-My simple Layout
+Idea for a minimalist layout
